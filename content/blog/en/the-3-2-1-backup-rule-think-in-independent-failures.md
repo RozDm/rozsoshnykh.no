@@ -53,6 +53,12 @@ Hardware and location are easy to see, and the administrative domain is the one 
 - **Another provider, contract or account.** Copies with the same provider, under the same contract, legal entity or payment can share a fate even with separate accounts and immutability. An account can be closed by mistake or for a breach of terms, data can be deleted after an unpaid bill, and a provider can stop the service. At least one copy should be outside that domain.
 - **Versions in a chain.** Versions in an incremental or deduplicated chain depend on each other, so one damaged base block or repository index can take every later version. Check the repository regularly, and make at least one copy directly from the source into a separate repository, since replicating from the same repository copies the damage.
 
+## Data rots quietly
+
+Stored data degrades even when nobody touches it. Disks develop sectors that can no longer be read, flash memory loses its charge, faster when it is worn or left unpowered for a long time, and optical discs and tapes age. Errors also slip in on the way, in transfer, in memory or in firmware. Most of it is silent, and the file still opens, or seems to, until the day it does not. Storage systems at work often check for this. A drive in a drawer at home, or a memory stick with the only copy of the photos, gets no such care.
+
+The defence is the same everywhere. Store checksums and verify every copy regularly, so that a rotten copy is found while a good one still exists, and replace it from that one. Move data to new media before the old ones age out. And keep enough history, because rot that is copied into every backup and outlives the retention takes the last good version with it.
+
 ## 3-2-1-1-0 and retention
 
 The extended form adds two parts for failures the simple rule does not cover.
@@ -83,7 +89,7 @@ Backups fail silently through the wrong path, missing files, a job that reports 
 
 - **Spot checks, often.** Restore a few random files and check the contents. It is cheap, so do it regularly.
 - **A full restore, on a schedule.** Start from clean equipment with only the copy and what is kept outside the backup, and include the loss of a whole site. Time it and compare with the RTO. Not every company tests this, and I have seen it myself.
-- **Integrity.** Store checksums when the copy is made and verify them on reading and at intervals, so that silent bit rot in a stored copy is found before you need it. A restored database should start and pass its own consistency check, and since a running database copied at file level can end up unusable, use its own consistent dump or snapshot.
+- **Integrity.** Verify the checksums, as described under data rot. A restored database should start and pass its own consistency check, and since a running database copied at file level can end up unusable, use its own consistent dump or snapshot.
 
 After a break-in, rebuild the systems from configuration and code and restore only data from a point before the intrusion, since restoring whole system images restores the intruder as well.
 
@@ -96,6 +102,7 @@ Automate the schedule, the verification and the clean-up, because manual backups
 - No single event (a fault, an account, a machine or a person) can delete all the copies. Production cannot delete or overwrite them, and better still, it has no access to them at all. At least one copy is made directly from the source into a separate repository, and the repository is checked regularly.
 - At least one copy is offline or immutable, enforced by the storage itself.
 - We keep several versions, and the retention is longer than the time it takes to notice a problem.
+- Every copy is verified against checksums regularly, and media are renewed before they age out.
 - Every copy is encrypted with keys we hold, and the key is kept in at least two places that do not share a fate.
 - The runbook, the key, the tool to read the format and the access to the storage are kept outside the backup and readable without it, and the restore order has no cycles.
 - The copying and the verification run automatically, and we get an alarm when a successful run of either fails to arrive.

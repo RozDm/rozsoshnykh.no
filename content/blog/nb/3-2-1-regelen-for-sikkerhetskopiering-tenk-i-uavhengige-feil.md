@@ -52,6 +52,12 @@ Maskinvare og sted er lette å få øye på, men det administrative domenet blir
 - **Annen leverandør, avtale eller konto.** Kopier hos samme leverandør, under samme avtale, juridiske enhet eller betaling kan dele skjebne selv med atskilte kontoer og uforanderlighet. En konto kan bli stengt ved en feil eller for brudd på vilkårene, data kan bli slettet etter en ubetalt regning, og en leverandør kan legge ned tjenesten. Minst én kopi bør ligge utenfor dette domenet.
 - **Versjoner i en kjede.** Versjonene i en inkrementell eller deduplisert kjede avhenger av hverandre, så én skadet basisblokk eller en skadet indeks i arkivet kan ta alle senere versjoner. Kontroller arkivet jevnlig, og lag minst én kopi direkte fra kilden inn i et separat arkiv, siden replikering fra samme arkiv kopierer skaden.
 
+## Data råtner i det stille
+
+Lagrede data forringes selv om ingen rører dem. Disker får sektorer som ikke lenger lar seg lese, flashminne mister ladning, fortere når det er slitt eller har ligget lenge uten strøm, og optiske plater og bånd eldes. Feil kan også snike seg inn underveis, ved overføring, i minnet eller i fastvaren. Det meste skjer i det stille, og filen åpner seg, eller ser ut til det, til dagen den ikke gjør det. Lagringssystemer på jobb sjekker ofte for dette. En disk i en skuff hjemme, eller en minnepinne med de eneste bildene, får ingen slik oppfølging.
+
+Forsvaret er det samme overalt. Lagre sjekksummer og kontroller hver kopi jevnlig, slik at en råtten kopi blir funnet mens en god fortsatt finnes, og erstatt den fra den gode. Flytt data over på nye medier før de gamle eldes ut. Og ta vare på nok historikk, for råte som blir kopiert inn i hver sikkerhetskopi og lever lenger enn oppbevaringstiden, tar den siste gode versjonen med seg.
+
 ## 3-2-1-1-0 og oppbevaringstid
 
 Den utvidede formen legger til to ledd for feil den enkle regelen ikke dekker.
@@ -82,7 +88,7 @@ Kopier svikter stille, med feil sti, manglende filer, en jobb som «lykkes» med
 
 - **Stikkprøver, ofte.** Gjenopprett noen tilfeldige filer og sjekk innholdet. Det er billig, så gjør det jevnlig.
 - **Full gjenoppretting, på fast tid.** Start fra rent utstyr med bare kopien og det som ligger utenfor sikkerhetskopien, og la prøven omfatte tap av et helt sted. Ta tiden og sammenlign med RTO. Ikke alle bedrifter tester dette, og jeg har sett det selv.
-- **Integritet.** Lagre sjekksummer når kopien lages, og kontroller dem ved lesing og med jevne mellomrom, så stille datarot i en lagret kopi blir oppdaget før du trenger den. En gjenopprettet database skal starte og bestå sin egen konsistenssjekk, og siden en database som kjører og kopieres på filnivå kan bli ubrukelig, bør du bruke databasens egen konsistente dump eller øyeblikksbilde.
+- **Integritet.** Kontroller sjekksummene, som beskrevet under datarot. En gjenopprettet database skal starte og bestå sin egen konsistenssjekk, og siden en database som kjører og kopieres på filnivå kan bli ubrukelig, bør du bruke databasens egen konsistente dump eller øyeblikksbilde.
 
 Etter et innbrudd bygger du systemene opp igjen fra konfigurasjon og kode og gjenoppretter bare data fra et tidspunkt før innbruddet, for hele systembilder får inntrengeren med.
 
@@ -95,6 +101,7 @@ Automatiser tidsplanen, kontrollen og oppryddingen, for manuelle sikkerhetskopie
 - Ingen enkelthendelse (en feil, en konto, en maskin eller en person) kan slette alle kopiene. Produksjonen kan ikke slette eller overskrive dem, og best er at den ikke har tilgang i det hele tatt. Minst én kopi lages direkte fra kilden inn i et separat arkiv, og arkivet kontrolleres jevnlig.
 - Minst én kopi er frakoblet eller uforanderlig, og lagringen selv håndhever det.
 - Vi har flere versjoner, og oppbevaringen er lengre enn tiden det tar å oppdage et problem.
+- Hver kopi kontrolleres jevnlig mot sjekksummer, og medier fornyes før de eldes ut.
 - Alle kopier er kryptert med nøkler vi selv holder, og nøkkelen ligger på minst to steder som ikke deler skjebne.
 - Veiledningen, nøkkelen, verktøyet til å lese formatet og tilgangen til lagringen ligger utenfor sikkerhetskopien og er lesbare uten den, og gjenopprettingsrekkefølgen har ingen sykluser.
 - Kopieringen og kontrollen kjører automatisk, og vi får alarm når en vellykket kjøring av en av dem uteblir.
