@@ -4,7 +4,6 @@ description: "A backup is judged only by the restore. 3-2-1 is a model of indepe
 date: "2026-11-21"
 tags: ["Sikkerhet"]
 translationOf: "3-2-1-regelen-for-sikkerhetskopiering-tenk-i-uavhengige-feil"
-draft: true
 ---
 
 A backup is judged on one thing: whether you get the data back when you need it. Everything before that is preparation, and anything untested is a claim.
