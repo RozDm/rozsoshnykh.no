@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="518" viewBox="0 0 640 518">
+  <!-- The question "for each event, how many copies are left?" run over a typical
+       3-2-1 setup: original and local copy at site 1, an immutable copy at site 2.
+       The Norwegian twin is kopier-igjen.svg: change both, then npm run diagrams. -->
+  <rect x="1" y="1" width="638" height="516" rx="14" fill="#fff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="24" y="24" width="592" height="106" rx="10" fill="#f3f4f6"/>
+  <text x="36" y="46" font-size="15" font-weight="700" fill="#111827">Event</text>
+  <text x="260" y="46" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">Original</text>
+  <text x="260" y="82" font-size="13" text-anchor="middle" fill="#4b5563">site 1</text>
+  <text x="260" y="98" font-size="13" text-anchor="middle" fill="#4b5563">kind A</text>
+  <text x="360" y="46" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">Local</text>
+  <text x="360" y="63" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">copy</text>
+  <text x="360" y="82" font-size="13" text-anchor="middle" fill="#4b5563">site 1</text>
+  <text x="360" y="98" font-size="13" text-anchor="middle" fill="#4b5563">kind B</text>
+  <text x="460" y="46" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">Off-site</text>
+  <text x="460" y="63" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">copy</text>
+  <text x="460" y="82" font-size="13" text-anchor="middle" fill="#4b5563">site 2</text>
+  <text x="460" y="98" font-size="13" text-anchor="middle" fill="#4b5563">kind A</text>
+  <text x="460" y="114" font-size="13" text-anchor="middle" fill="#4b5563">immutable</text>
+  <text x="563" y="46" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">Copies</text>
+  <text x="563" y="63" font-size="15" font-weight="700" text-anchor="middle" fill="#111827">left</text>
+
+  <!-- One row per event. A kept copy has a solid frame and a check, a lost one a
+       dashed red frame and a cross; the word says it too. -->
+  <rect x="24" y="142" width="592" height="64" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="36" y="170" font-size="16" fill="#111827">A deleted file</text>
+  <text x="36" y="190" font-size="16" fill="#111827">or a dead disk</text>
+  <rect x="214" y="156" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M223 169l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="272" y="180" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="314" y="156" width="92" height="36" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <path d="M322 175l5 6l10-13" fill="none" stroke="#111827" stroke-width="2.5"/>
+  <text x="372" y="180" font-size="15" text-anchor="middle" fill="#111827">kept</text>
+  <rect x="414" y="156" width="92" height="36" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <path d="M422 175l5 6l10-13" fill="none" stroke="#111827" stroke-width="2.5"/>
+  <text x="472" y="180" font-size="15" text-anchor="middle" fill="#111827">kept</text>
+  <rect x="513" y="148" width="100" height="52" rx="8" fill="#fff" stroke="#111827" stroke-width="2"/>
+  <text x="563" y="176" font-size="28" font-weight="700" text-anchor="middle" fill="#111827">2</text>
+  <text x="563" y="193" font-size="12" text-anchor="middle" fill="#111827">margin</text>
+  <rect x="24" y="214" width="592" height="64" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="36" y="242" font-size="16" fill="#111827">A fault in</text>
+  <text x="36" y="262" font-size="16" fill="#111827">storage kind A</text>
+  <rect x="214" y="228" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M223 241l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="272" y="252" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="314" y="228" width="92" height="36" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <path d="M322 247l5 6l10-13" fill="none" stroke="#111827" stroke-width="2.5"/>
+  <text x="372" y="252" font-size="15" text-anchor="middle" fill="#111827">kept</text>
+  <rect x="414" y="228" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M423 241l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="472" y="252" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="513" y="220" width="100" height="52" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <text x="563" y="248" font-size="28" font-weight="700" text-anchor="middle" fill="#4b5563">1</text>
+  <text x="563" y="265" font-size="12" text-anchor="middle" fill="#4b5563">no margin</text>
+  <rect x="24" y="286" width="592" height="64" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="36" y="324" font-size="16" fill="#111827">Fire at site 1</text>
+  <rect x="214" y="300" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M223 313l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="272" y="324" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="314" y="300" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M323 313l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="372" y="324" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="414" y="300" width="92" height="36" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <path d="M422 319l5 6l10-13" fill="none" stroke="#111827" stroke-width="2.5"/>
+  <text x="472" y="324" font-size="15" text-anchor="middle" fill="#111827">kept</text>
+  <rect x="513" y="292" width="100" height="52" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <text x="563" y="320" font-size="28" font-weight="700" text-anchor="middle" fill="#4b5563">1</text>
+  <text x="563" y="337" font-size="12" text-anchor="middle" fill="#4b5563">no margin</text>
+  <rect x="24" y="358" width="592" height="64" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="36" y="379" font-size="16" fill="#111827">A compromised</text>
+  <text x="36" y="397" font-size="16" fill="#111827">shared admin</text>
+  <text x="36" y="415" font-size="16" fill="#111827">account</text>
+  <rect x="214" y="372" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M223 385l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="272" y="396" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="314" y="372" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M323 385l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="372" y="396" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="414" y="372" width="92" height="36" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <path d="M422 391l5 6l10-13" fill="none" stroke="#111827" stroke-width="2.5"/>
+  <text x="472" y="396" font-size="15" text-anchor="middle" fill="#111827">kept</text>
+  <rect x="513" y="364" width="100" height="52" rx="8" fill="#f3f4f6" stroke="#4b5563" stroke-width="2"/>
+  <text x="563" y="392" font-size="28" font-weight="700" text-anchor="middle" fill="#4b5563">1</text>
+  <text x="563" y="409" font-size="12" text-anchor="middle" fill="#4b5563">no margin</text>
+  <rect x="24" y="430" width="592" height="64" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="36" y="451" font-size="16" fill="#111827">Corruption</text>
+  <text x="36" y="469" font-size="16" fill="#111827">older than</text>
+  <text x="36" y="487" font-size="16" fill="#111827">the retention</text>
+  <rect x="214" y="444" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M223 457l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="272" y="468" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="314" y="444" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M323 457l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="372" y="468" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="414" y="444" width="92" height="36" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M423 457l12 12m0-12l-12 12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="472" y="468" font-size="15" text-anchor="middle" fill="#dc2626">lost</text>
+  <rect x="513" y="436" width="100" height="52" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="563" y="464" font-size="28" font-weight="700" text-anchor="middle" fill="#dc2626">0</text>
+  <text x="563" y="483" font-size="12" text-anchor="middle" fill="#dc2626">data lost</text>
+</svg>
