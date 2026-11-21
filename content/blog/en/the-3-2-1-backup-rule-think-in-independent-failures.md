@@ -88,7 +88,7 @@ The backup holds the data, the configuration and the secrets. Outside it sits wh
 Backups fail silently through the wrong path, missing files, a job that reports success after copying an empty folder, a format that needs software you no longer have or a damaged medium, and none of it shows until you restore.
 
 - **Spot checks, often.** Restore a few random files and check the contents. It is cheap, so do it regularly.
-- **A full restore, on a schedule.** Start from clean equipment with only the copy and what is kept outside the backup, and include the loss of a whole site. Time it and compare with the RTO. Not every company tests this, and I have seen it myself.
+- **A full restore, on a schedule.** Start from clean equipment with only the copy and what is kept outside the backup, and include the loss of a whole site, the scenario that is easiest to leave untested. Time it and compare with the RTO.
 - **Integrity.** Verify the checksums, as described under data rot. A restored database should start and pass its own consistency check, and since a running database copied at file level can end up unusable, use its own consistent dump or snapshot.
 
 After a break-in, rebuild the systems from configuration and code and restore only data from a point before the intrusion, since restoring whole system images restores the intruder as well.

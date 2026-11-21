@@ -87,7 +87,7 @@ Sikkerhetskopien rommer dataene, konfigurasjonen og hemmelighetene. Utenfor ligg
 Kopier svikter stille, med feil sti, manglende filer, en jobb som «lykkes» med å kopiere en tom mappe, et format som krever programvare du ikke lenger har eller et ødelagt medium, og ingenting av det viser seg før du gjenoppretter.
 
 - **Stikkprøver, ofte.** Gjenopprett noen tilfeldige filer og sjekk innholdet. Det er billig, så gjør det jevnlig.
-- **Full gjenoppretting, på fast tid.** Start fra rent utstyr med bare kopien og det som ligger utenfor sikkerhetskopien, og la prøven omfatte tap av et helt sted. Ta tiden og sammenlign med RTO. Ikke alle bedrifter tester dette, og jeg har sett det selv.
+- **Full gjenoppretting, på fast tid.** Start fra rent utstyr med bare kopien og det som ligger utenfor sikkerhetskopien, og la prøven omfatte tap av et helt sted, scenarioet det er lettest å la være å teste. Ta tiden og sammenlign med RTO.
 - **Integritet.** Kontroller sjekksummene, som beskrevet under datarot. En gjenopprettet database skal starte og bestå sin egen konsistenssjekk, og siden en database som kjører og kopieres på filnivå kan bli ubrukelig, bør du bruke databasens egen konsistente dump eller øyeblikksbilde.
 
 Etter et innbrudd bygger du systemene opp igjen fra konfigurasjon og kode og gjenoppretter bare data fra et tidspunkt før innbruddet, for hele systembilder får inntrengeren med.
