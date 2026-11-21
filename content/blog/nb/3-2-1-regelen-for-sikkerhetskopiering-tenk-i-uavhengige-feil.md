@@ -111,6 +111,6 @@ Automatiser tidsplanen, kontrollen og oppryddingen, for manuelle sikkerhetskopie
 
 En venn fortalte meg en gang om en harddisk han brukte halvannet år på å berge. Den tilhørte en venninne av ham, en kvinne som hadde mistet mannen sin, og på den lå alle bildene av ham, fra ferier og turer de to hadde hatt sammen.
 
-Det vanskelige var å finne en donordisk, en identisk disk fra samme produksjonsparti, og deretter å få dataene ut av den. Firmaer som driver med datagjenoppretting, ville ikke ta jobben. Han lette selv etter donordisken og gjorde arbeidet på egen tid, og han tok ikke betalt, fordi hun var en venn.
+Det vanskelige var å finne en donordisk, en identisk disk fra samme produksjonsparti, og deretter å berge dataene. Firmaer som driver med datagjenoppretting, ville ikke ta jobben. Han lette selv etter donordisken og gjorde arbeidet på egen tid, og han tok ikke betalt, fordi hun var en venn.
 
 Hun fikk tilbake hvert eneste bilde av mannen sin, og hun gråt da hun fikk dem. Det er prisen.
