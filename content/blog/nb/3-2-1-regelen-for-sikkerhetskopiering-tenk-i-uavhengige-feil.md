@@ -109,8 +109,8 @@ Automatiser tidsplanen, kontrollen og oppryddingen, for manuelle sikkerhetskopie
 
 ## En historie til slutt
 
-Noen fortalte meg en gang om en jobb vedkommende hadde gjort for en kvinne hvis mann var død. Alle bildene av ham, fra ferier og turer de to hadde gjort sammen, lå på én harddisk, og harddisken sviktet.
+En venn fortalte meg en gang om en harddisk han brukte halvannet år på å berge. Den tilhørte en venninne av ham, en kvinne som hadde mistet mannen sin, og på den lå alle bildene av ham, fra ferier og turer de to hadde hatt sammen.
 
-Det tok halvannet år å få dataene tilbake. Det innebar å finne en donordisk, en identisk disk å ta deler fra, og å jobbe med å berge dataene. Vedkommende kjente henne og tok derfor ikke betalt.
+Det vanskelige var å finne en donordisk, en identisk disk fra samme produksjonsparti, og deretter å få dataene ut av den. Firmaer som driver med datagjenoppretting, ville ikke ta jobben. Han lette selv etter donordisken og gjorde arbeidet på egen tid, og han tok ikke betalt, fordi hun var en venn.
 
-Vedkommende fortalte at hun gråt da hun fikk dem tilbake. Alle bildene av mannen hennes, alt var berget.
+Hun fikk tilbake hvert eneste bilde av mannen sin, og hun gråt da hun fikk dem. Det er prisen.

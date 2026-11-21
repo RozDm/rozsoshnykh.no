@@ -110,8 +110,8 @@ Automate the schedule, the verification and the clean-up, because manual backups
 
 ## A story to end with
 
-Someone once told me about a recovery they did for a woman whose husband had died. All the photos of him, from the holidays and trips the two of them took together, were on one hard drive, and the drive failed.
+A friend once told me about a hard drive he spent a year and a half recovering. It belonged to a friend of his, a woman whose husband had died, and it held all the photos of him, from the holidays and trips the two of them took together.
 
-Getting the data back took a year and a half. It meant finding a donor drive, an identical drive to take parts from, and working to recover the data. They knew her, so they took no money for it.
+The hard part was finding a donor drive, an identical one from the same production batch, and then getting the data off it. Data recovery companies would not take the job. He searched for the donor drive himself and did the work in his own time, and he took no money for it, because she was his friend.
 
-They told me she cried when she got them back. All the photos of her husband, everything, recovered.
+She got every photo of her husband back, and she cried when she did. That is the price.
