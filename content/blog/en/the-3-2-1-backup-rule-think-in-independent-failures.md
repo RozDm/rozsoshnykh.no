@@ -142,5 +142,3 @@ Someone once told me about a recovery they did for a woman whose husband had die
 Getting the data back took a year and a half. It meant finding a donor drive, an identical drive to take parts from, and working to recover the data. They knew her, so they took no money for it.
 
 They told me she cried when she got them back. All the photos of her husband, everything, recovered.
-
-This is not only a matter for companies. It matters just as much at home, and we usually understand what something was worth only once it is gone.

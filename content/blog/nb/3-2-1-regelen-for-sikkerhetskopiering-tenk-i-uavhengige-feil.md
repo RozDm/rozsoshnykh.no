@@ -141,5 +141,3 @@ Noen fortalte meg en gang om en jobb vedkommende hadde gjort for en kvinne hvis 
 Det tok halvannet år å få dataene tilbake. Det innebar å finne en donordisk, en identisk disk å ta deler fra, og å jobbe med å berge dataene. Vedkommende kjente henne og tok derfor ikke betalt.
 
 Vedkommende fortalte at hun gråt da hun fikk dem tilbake. Alle bildene av mannen hennes, alt var berget.
-
-Dette gjelder ikke bare bedrifter. Det gjelder like mye hjemme, og som regel forstår vi først hva noe var verdt når det er borte.
