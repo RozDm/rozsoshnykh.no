@@ -14,7 +14,7 @@ En sikkerhetskopi bedømmes etter én ting: om du får dataene tilbake når du t
 
 Alt som kan ødelegge data, har en rekkevidde. En slettet fil rammer én fil, en død disk én disk og en brann et helt rom. En kopi beskytter deg bare mot feil som ikke når fram til den, så uavhengighet gjelder alltid i forhold til en bestemt trussel. To kopier som kan gå tapt av samme årsak, er én kopi mot den årsaken. Originalen og en kopi i samme rom er én kopi mot brann, men to mot en død disk.
 
-Spørsmålet å stille til et oppsett er **for hver hendelse jeg må overleve, hvor mange kopier er det igjen etterpå?** Null betyr ingen beskyttelse mot hendelsen, og én betyr ingen margin. Bestem hvilke hendelser som skal ha margin.
+Spørsmålet å stille til et oppsett er dette: **for hver hendelse jeg må overleve, hvor mange kopier er det igjen etterpå?** Null betyr ingen beskyttelse mot hendelsen, og én betyr ingen margin. Bestem hvilke hendelser som skal ha margin.
 
 ## Regelen, del for del
 
@@ -29,10 +29,6 @@ Spørsmålet å stille til et oppsett er **for hver hendelse jeg må overleve, h
 **Hvorfor to slags.** To disker av samme type, kjøpt og tatt i bruk samtidig, slites likt og kan ha samme skjulte feil, og det samme gjelder to kopier som styres av samme programvare. Det avgjørende er om feilmåtene er forskjellige, uansett hva de heter. Med tre kopier på to slags lagring deler to av dem type, og rammes den typen av en feil, sitter du igjen med én kopi uten margin.
 
 **Hvorfor ett annet sted.** Hvor langt unna det må ligge, avhenger av hendelsen du vil beskytte deg mot. Kopien må ligge utenfor rekkevidden til alt som kan ramme originalen, så samme rom, samme bygning eller samme strømkurs betyr samme skjebne.
-
-Går du gjennom et typisk oppsett med spørsmålet, med originalen og en lokal kopi på sted 1 og en uforanderlig kopi på sted 2, blir resultatet slik.
-
-![Et rutenett som viser hvor mange kopier som overlever hver hendelse. Kolonnene er originalen (sted 1, type A), en lokal kopi (sted 1, type B), en ekstern kopi (sted 2, type A, uforanderlig) og antall kopier igjen. En slettet fil eller en død disk: originalen er tapt, de to andre er i behold, 2 kopier igjen. En feil i type A: originalen og den eksterne kopien er tapt, den lokale kopien er i behold, 1 igjen. Brann på sted 1: originalen og den lokale kopien er tapt, den eksterne kopien er i behold, 1 igjen. En kompromittert administratorkonto: originalen og den lokale kopien er tapt, den eksterne kopien er i behold, 1 igjen. Skade som er eldre enn oppbevaringstiden: alle tre er tapt, 0 igjen. Tegnforklaringen sier at 2 betyr margin, 1 betyr ingen margin og 0 betyr tapte data.](/images/3-2-1-regelen-for-sikkerhetskopiering-tenk-i-uavhengige-feil/kopier-igjen.svg)
 
 ## Bestem først hva du må tåle
 
@@ -58,7 +54,7 @@ Kopierte filer er ikke det samme som en konsistent tilstand. En database som kop
 
 ## Uavhengighet er den egentlige regelen
 
-Maskinvare og sted er lette å få øye på, men det administrative domenet blir glemt. Kan alle kopiene nås med samme konto, samme legitimasjon eller fra samme administrasjonsmaskin, kan én feil slette dem alle, enten det er en kompromittert maskin, en ansatt med en dårlig dag eller et opprydningsskript med feil sti. Kopiene kan ligge fysisk atskilt og likevel være én kopi administrativt.
+Maskinvare og sted er lette å få øye på, men det administrative domenet blir glemt. Kan alle kopiene nås med samme konto, samme legitimasjon eller fra samme administrasjonsmaskin, kan én feil slette dem alle, enten det er en kompromittert maskin eller et opprydningsskript med feil sti. Kopiene kan ligge fysisk atskilt og likevel være én kopi administrativt.
 
 - **Atskilt tilgang.** Sikkerhetskopiene har egne kontoer og egen legitimasjon, og den som administrerer produksjonen, blir ikke administrator av kopiene av den grunn.
 - **Minste privilegium.** Produksjonssiden kan skrive nye kopier, men ikke slette eller overskrive gamle. Enda bedre er det om sikkerhetskopisystemet henter dataene selv med bare lesetilgang, så en overtatt produksjon ikke har noen nøkkel til kopiene. Oppbevaringsreglene settes og håndheves av sikkerhetskopisystemet også.
@@ -82,6 +78,10 @@ Sammenlign historikken med hvor lang tid det tar før du oppdager et problem. Be
 
 Oppbevaringen har også en øvre grense, for noen data skal slettes etter en tid, og slettingen må før eller siden nå kopiene også. Uforanderlighet og påkrevd sletting må forenes i utformingen. Enten er uforanderlighetsvinduet ikke lengre enn tiden slettingen må skje innen, eller du krypterer datasett med hver sin nøkkel og sletter nøkkelen (kryptografisk sletting), også de deponerte kopiene av den. Det virker bare med grov granularitet (per kunde, datasett eller periode), og det flytter problemet til nøkkellageret, som trenger sin egen utforming. Det må overleve like godt som dataene og likevel la nøkler bli slettet.
 
+Går du gjennom spørsmålet for et typisk oppsett, med originalen og en lokal kopi på sted 1 og en uforanderlig kopi på sted 2, blir resultatet slik.
+
+![Et rutenett som viser hvor mange kopier som overlever hver hendelse. Kolonnene er originalen (sted 1, type A), en lokal kopi (sted 1, type B), en ekstern kopi (sted 2, type A, uforanderlig) og antall kopier igjen. En slettet fil eller en død disk: originalen er tapt, de to andre er i behold, 2 kopier igjen. En feil i type A: originalen og den eksterne kopien er tapt, den lokale kopien er i behold, 1 igjen. Brann på sted 1: originalen og den lokale kopien er tapt, den eksterne kopien er i behold, 1 igjen. En kompromittert felles adminkonto: originalen og den lokale kopien er tapt, den eksterne kopien er i behold, 1 igjen. Skade som er eldre enn oppbevaringstiden: alle tre er tapt, 0 igjen. Hvert resultat har også et ord: margin for 2, ingen margin for 1 og tapte data for 0.](/images/3-2-1-regelen-for-sikkerhetskopiering-tenk-i-uavhengige-feil/kopier-igjen.svg)
+
 ## Kryptering
 
 Krypter alle kopier. For kopier som forlater din kontroll, enten de havner et annet sted, hos andre eller på medier som flyttes, er kryptering et krav, og den skjer hos deg, før dataene forlater deg, med nøkler du selv har. Kryptering i ro med leverandørens nøkler beskytter verken mot en kompromittert konto eller mot leverandøren. Kanalen bør også være kryptert under overføring. Hver kopi er også en kopi for en tyv, så flere kopier gir større angrepsflate, og en sikkerhetskopi verner tilgjengelighet og integritet, men ikke mot at data blir stjålet.
@@ -100,14 +100,14 @@ Det som bevisst står utenfor, bør stå på en liste.
 
 ## Gjenopprettingsprøven
 
-En sikkerhetskopi som ikke er prøvd, er en hypotese. Kopier svikter stille, med feil sti, manglende filer, en jobb som «lykkes» med å kopiere en tom mappe, et format som krever programvare du ikke lenger har eller et ødelagt medium, og ingenting av det viser seg før du gjenoppretter.
+Kopier svikter stille, med feil sti, manglende filer, en jobb som «lykkes» med å kopiere en tom mappe, et format som krever programvare du ikke lenger har eller et ødelagt medium, og ingenting av det viser seg før du gjenoppretter.
 
 - **Stikkprøver, ofte.** Gjenopprett noen tilfeldige filer og sjekk innholdet. Det er billig, så gjør det jevnlig.
-- **Full gjenoppretting, på fast tid.** Start fra rent utstyr med bare kopien og det lag null rommer (se over): nøkkelen, veiledningen, verktøyet og tilgangen til lagringen. Ta tiden og sammenlign med RTO. Mange oppdager her at RTO var et ønske.
+- **Full gjenoppretting, på fast tid.** Start fra rent utstyr med bare kopien og det lag null rommer: nøkkelen, veiledningen, verktøyet og tilgangen til lagringen. Ta tiden og sammenlign med RTO. Mange oppdager her at RTO var et ønske.
 - **Integritet.** Lagre sjekksummer når kopien lages, og kontroller dem ved lesing og med jevne mellomrom, så stille datarot i en lagret kopi blir oppdaget før du trenger den. For en database betyr gjenoppretting at den starter og består sin egen konsistenssjekk.
-- **Granulær gjenoppretting.** Én tabell, én kunde eller ett objekt fra en bestemt dag, uten å rulle tilbake andres arbeid. Et helt systembilde kan bestå testen for full gjenoppretting og likevel feile her.
+- **Granulær gjenoppretting.** Én tabell eller ett objekt fra en bestemt dag, uten å rulle tilbake andres arbeid. Et helt systembilde kan bestå testen for full gjenoppretting og likevel feile her.
 
-Lag null råtner stille også, med et utløpt token, en andre faktor knyttet til noen som har sluttet, et verktøy som ikke lenger kjører eller en forseglet nøkkel fra før siste rotasjon. Prøven avslører dette, og det som overrasket deg, føres inn i veiledningen.
+Lag null råtner stille også, med et utløpt token, en andre faktor knyttet til noen som har sluttet eller en forseglet nøkkel fra før siste rotasjon. Prøven avslører dette, og det som overrasket deg, føres inn i veiledningen.
 
 ## Etter et innbrudd
 
@@ -115,7 +115,7 @@ Etter et innbrudd gjenoppretter du ikke hele systembilder, for da får du inntre
 
 ## Automatisering og overvåking
 
-Manuelle sikkerhetskopier blir før eller siden glemt, i en travel uke, ved en rutine som faller bort eller når en person har sluttet. Automatiser tidsplanen, kontrollen og oppryddingen etter oppbevaringstiden.
+Manuelle sikkerhetskopier blir før eller siden glemt, i en travel uke eller når en person har sluttet. Automatiser tidsplanen, kontrollen og oppryddingen etter oppbevaringstiden.
 
 Automatikk svikter også stille, og et varsel om feil er ikke nok, for en jobb som aldri starter, sender ingen feilmelding. Varsle på fravær av suksess. Forvent én vellykket kjøring av hver planlagte jobb, både kopieringen og kontrollen, per periode, og slå alarm når en uteblir. Se også på alderen og størrelsen til den nyeste kopien. Et plutselig utslag begge veier er et signal, for et fall kan bety at data mangler, og vekst kan bety at data er kryptert av andre enn deg, noe som verken lar seg deduplisere eller komprimere, så inkrementene vokser brått. Dette er pulsen fra [Hvem vokter vokterne? Tilsyn i IT-infrastruktur](/blogg/hvem-vokter-vokterne-i-it-infrastruktur/). En kontroll må ikke dele skjebne med det den overvåker, og stillhet må regnes som et funn.
 
@@ -136,8 +136,10 @@ Automatikk svikter også stille, og et varsel om feil er ikke nok, for en jobb s
 
 ## En historie til slutt
 
-Noen fortalte meg en gang om en jobb vedkommende hadde gjort for en kvinne hvis mann var død. Alle bildene av ham, fra ferier og turer de hadde gjort sammen, lå på én harddisk, og harddisken sviktet.
+Noen fortalte meg en gang om en jobb vedkommende hadde gjort for en kvinne hvis mann var død. Alle bildene av ham, fra ferier og turer de to hadde gjort sammen, lå på én harddisk, og harddisken sviktet.
 
 Det tok halvannet år å få dataene tilbake. Det innebar å finne en donordisk, en identisk disk å ta deler fra, og å jobbe med å berge dataene. Vedkommende kjente henne og tok derfor ikke betalt.
 
-Vedkommende fortalte at hun gråt da hun fikk alt tilbake. Alle bildene av mannen hennes, alt var berget.
+Vedkommende fortalte at hun gråt da hun fikk dem tilbake. Alle bildene av mannen hennes, alt var berget.
+
+Dette gjelder ikke bare bedrifter. Det gjelder like mye hjemme, og som regel forstår vi først hva noe var verdt når det er borte.
