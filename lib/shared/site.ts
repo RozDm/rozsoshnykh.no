@@ -33,9 +33,9 @@ export const SITE_COPY: Record<
 > = {
   nb: {
     roles: AUTHOR.roles,
-    title: `${AUTHOR.name} – Systemadministrator & DevOps i Vestland`,
+    title: `${AUTHOR.name} – Systemadministrator & DevOps i Bergen`,
     description:
-      'Systemadministrator, DevOps og utvikler med fokus på infrastruktur, automatisering og sikkerhet. Basert i Askøy, Vestland.',
+      'Systemadministrator, DevOps og utvikler med fokus på infrastruktur, automatisering og sikkerhet. Askøy ved Bergen – oppdrag og stillinger i hele Norge.',
     // Short form for social cards and the manifest.
     tagline: `${AUTHOR.roles.join(' · ')}. Infrastruktur, automatisering og sikkerhet.`,
     focus: 'Infrastruktur · Automatisering · Sikkerhet',
@@ -43,9 +43,9 @@ export const SITE_COPY: Record<
   en: {
     roles: ROLES_EN,
     // ≤ 60 characters: Google cuts longer titles in its results.
-    title: `${AUTHOR.name} – Sysadmin & DevOps in Vestland, Norway`,
+    title: `${AUTHOR.name} – Sysadmin & DevOps in Bergen, Norway`,
     description:
-      'Systems administrator, DevOps engineer and developer focused on infrastructure, automation and security. Based in Askøy, Vestland, Norway.',
+      'Systems administrator, DevOps engineer and developer focused on infrastructure, automation and security. Askøy near Bergen – roles and projects across Norway.',
     tagline: `${ROLES_EN.join(' · ')}. Infrastructure, automation and security.`,
     focus: 'Infrastructure · Automation · Security',
   },

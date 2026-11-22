@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: AUTHOR.name,
     short_name: 'rozsoshnykh',
-    description: `${AUTHOR.roles.join(' · ')} i Vestland.`,
+    description: `${AUTHOR.roles.join(' · ')} i Bergen.`,
     start_url: '/',
     scope: '/',
     display: 'standalone',
