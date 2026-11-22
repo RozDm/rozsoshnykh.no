@@ -24,7 +24,7 @@ Look for:
 - **Modernization**: Next 16, React 19, TypeScript 6 features actually used; obsolete patterns; dependencies a major behind.
 - **SEO**: the technical checks (canonicals, sitemap/robots, JSON-LD, OG images, hreflang) plus the goal fit below.
 - **Accessibility** (universell utforming is a signal Norwegian employers notice): axe-core through the `browser-check` skill; the keyboard path (intro skippable by key, visible focus); contrast in both themes; `lang` on `/en/` pages; alt text.
-- **Content and conversion**: thin prose on the home page (one hero paragraph, the rest widgets); no experience/CV section; no projects or case studies (the site is itself a DevOps case: Workers, D1, CSP, CI/CD with rollback, WAF, watchdog); no clear CTA or availability line; post cadence and topic clusters; internal links from posts to home and contact. Facts about the owner's experience come only from the owner — never write or invent them; list what is missing as a question.
+- **Content and conversion**: thin prose on the home page (one hero paragraph, the rest widgets); no clear CTA or availability line; post cadence and topic clusters; internal links from posts to home and contact. Facts about the owner's experience come only from the owner — never write or invent them. An experience section and a case-study post about the site are the owner's to bring later (2026-11-22): don't raise them.
 - **Operational**: free-tier limits (KV 1k writes/day, D1 100k writes/day), monitoring blind spots, missing alerts.
 
 ## SEO with a goal
@@ -34,7 +34,7 @@ The site's job is to be found and to convince an employer or client in Norway. T
 - Bergen-area local terms: "DevOps Bergen", "systemadministrator Bergen", "IT-drift Askøy";
 - long-tail Norwegian technical posts.
 
-Check title, description, H1, body and internal links against these; check the search intent of each target (WebSearch is a US API, so its results are indicative, not google.no); title ≤ 60 characters. Whether the site targets employers or clients, and whether "Bergen" replaces "Vestland" in the title, are pending owner decisions: raise them as a question, never as a fix the audit applies on its own.
+Check title, description, H1, body and internal links against these; check the search intent of each target (WebSearch is a US API, so its results are indicative, not google.no); title ≤ 60 characters. The site targets employers and clients alike, positioned on Bergen with reach across all of Norway (owner, 2026-11-22, `docs/decisions.md`): the local terms come first, and national reach comes from long-tail posts and the description.
 
 ## Launch gate
 
@@ -58,7 +58,7 @@ Read `docs/decisions.md` first and the root `CLAUDE.md` Hard rules: the owner's 
 
 ## Evidence
 
-Every finding cites `file:line` or a measured number, in the Item or Why cell (no extra column). Performance findings come only from a measurement: build output sizes, or a fresh Playwright context on production (first visit, so the intro plays). Chrome's LCP ignores the intro overlay, so the intro doesn't show up in LCP: judge it as an interstitial for visitors from search. The theme stays as it is; skipping the intro for visitors referred by a search engine is a pending owner question.
+Every finding cites `file:line` or a measured number, in the Item or Why cell (no extra column). Performance findings come only from a measurement: build output sizes, or a fresh Playwright context on production (first visit, so the intro plays). Chrome's LCP ignores the intro overlay, so the intro doesn't show up in LCP. The intro plays for every first-time visitor, search referrals included (owner, 2026-11-22): don't propose skipping it.
 
 Check the live output, not only the code, when production is reachable: `curl https://rozsoshnykh.no/robots.txt`, sitemap.xml, response headers and meta robots. The live robots.txt is `app/robots.ts` plus Cloudflare's managed block (`docs/cloudflare-security.md`, "AI bots"): training crawlers (GPTBot, ClaudeBot, Google-Extended) are disallowed, search bots (OAI-SearchBot, PerplexityBot) are allowed, by design — don't flag it.
 

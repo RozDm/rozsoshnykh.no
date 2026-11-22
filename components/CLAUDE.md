@@ -7,6 +7,8 @@ Traps only. Conventions, widgets, counters, contact form, e2e:
 - The 2001 theme is load-bearing: intro `HEI %USERNAME%` (a literal joke),
   HAL idle/eye, the 404 and `error.tsx` copy, loader lines. Don't "fix" them.
   The status caption stays quiet, «Siste 149 sjekker» (owner, 2026-11-11).
+  The intro plays for every first-time visitor, search referrals included:
+  never propose skipping it for a group (owner, 2026-11-22).
 - The hero has no `animate-fade-in` (opacity-0 delays LCP). Skill chips
   highlight on hover though not links: keep (owner).
 - Accent TEXT is red-600 light / red-400 dark (red-500 fails AA as text).
