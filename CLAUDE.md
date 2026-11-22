@@ -66,7 +66,7 @@ API route, workflow, skill or hook in no doc, or on a file without that header.
   user.name='RozDm' -c user.email='187502949+RozDm@users.noreply.github.com'
   commit`) or the squash adds `Co-authored-by: Claude`. Commits: subject + a
   few lines; PR bodies: short bullets, what and why. Replies to the owner
-  (writes Russian): outcome first, then only what needs their decision.
+  (in their language): outcome first, then only what needs their decision.
 
 ## Commands
 

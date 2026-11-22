@@ -4,7 +4,10 @@ Portfolio and blog of Dmytro Rozsoshnykh (sysadmin / DevOps, Norway), live at
 https://rozsoshnykh.no. Norwegian (`nb-NO`) at the root, English (`en-GB`, see
 `INTL_LOCALE` in `lib/shared/i18n.ts`) twin under `/en/`. Written almost
 entirely in sessions with Claude Code, and set up so such a session can change
-the site and ship it. Code and docs are English.
+the site and ship it. Dmytro sets the direction and the rules and answers for
+every change, so the commits are in Dmytro's name; the sessions write the code
+and ship it through CI, smoke tests and automatic rollback. Code and docs are
+English.
 
 **Stack:** Next.js 16 static export (App Router, React 19, TypeScript,
 Tailwind v4) on Cloudflare Workers static assets, plus a small Worker for

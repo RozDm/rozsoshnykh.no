@@ -1,13 +1,13 @@
 ---
 name: new-post
-description: Scaffold a new blog post in Norwegian and English (content/blog/nb/<slug>.md + content/blog/en/<slug>.md, linked by translationOf) with the project's frontmatter conventions (title, description, ISO date, tags from data/tags.ts), and publish a draft when it is ready. Use when the user asks to create, start, draft, translate, add or publish a blog post / artikkel / blogginnlegg / статью.
+description: Scaffold a new blog post in Norwegian and English (content/blog/nb/<slug>.md + content/blog/en/<slug>.md, linked by translationOf) with the project's frontmatter conventions (title, description, ISO date, tags from data/tags.ts), and publish a draft when it is ready. Use when the user asks to create, start, draft, translate, add or publish a blog post / artikkel / blogginnlegg.
 model: sonnet
 effort: high
 ---
 
 # New blog post
 
-The blog is bilingual: a Norwegian post in `content/blog/nb/<slug>.md` and its English twin in `content/blog/en/<en-slug>.md`, which names the Norwegian slug in `translationOf`. The owner may write the draft in any language (often Russian) — you produce both versions, and they read both before publishing. A post that only makes sense in one language (e.g. a Norway-specific topic) may skip the twin; ask if unsure.
+The blog is bilingual: a Norwegian post in `content/blog/nb/<slug>.md` and its English twin in `content/blog/en/<en-slug>.md`, which names the Norwegian slug in `translationOf`. The owner may write the draft in any language — you produce both versions, and they read both before publishing. A post that only makes sense in one language (e.g. a Norway-specific topic) may skip the twin; ask if unsure.
 
 The rules below are enforced, so a slip fails `npm run dev`, `npm test` and the build instead of going live: the frontmatter by `lib/server/post-frontmatter.ts` (on every read), the text by `tests/lib/server/blog-content.test.ts`, the twins by `tests/lib/server/blog-pairs.test.ts`, images by `lib/server/post-images.ts` at build.
 
