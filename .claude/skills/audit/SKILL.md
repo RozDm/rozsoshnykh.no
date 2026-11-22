@@ -26,6 +26,7 @@ Look for:
 - **Accessibility** (universell utforming is a signal Norwegian employers notice): axe-core through the `browser-check` skill; the keyboard path (intro skippable by key, visible focus); contrast in both themes; `lang` on `/en/` pages; alt text.
 - **Content and conversion**: thin prose on the home page (one hero paragraph, the rest widgets); no clear CTA or availability line; post cadence and topic clusters; internal links from posts to home and contact. Facts about the owner's experience come only from the owner — never write or invent them. An experience section and a case-study post about the site are the owner's to bring later (2026-11-22): don't raise them.
 - **Operational**: free-tier limits (KV 1k writes/day, D1 100k writes/day), monitoring blind spots, missing alerts.
+- **Public-repo hygiene** (the repository is public, history included): personal details beyond what the site's own pages show, legal self-assessments, wording a reader could take as hiding something, secrets in the tree (`docs/decisions.md`, 2026-11-22).
 
 ## SEO with a goal
 
